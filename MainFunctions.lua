@@ -1,1 +1,1 @@
-warn('Running!')
+return true
