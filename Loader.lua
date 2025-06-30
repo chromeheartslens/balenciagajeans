@@ -132,6 +132,7 @@ task.spawn(function()
 		end
 
 		if CurrentVersion and Vers then
+			print(CurrentVersion, Vers)
 			if CurrentVersion ~= Vers then
 				pcall(function()
 					warn("2222Pre int vers:", tostring(CurrentVersion))
