@@ -44,4 +44,8 @@ function Mainfuncs:PlayerRemoving(Player)
     if not s then end;
 end
 
+function Mainfuncs:GeneralFunction()
+    return true
+end
+
 return Mainfuncs
