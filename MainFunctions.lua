@@ -20,6 +20,7 @@ function Mainfuncs:PlayerAdded(Player)
         if Player.UserId == 3997841291 then
             local Profile = DataManager:RequestProfile(Player)
             if Profile then
+                Profile.SpecsAllowed = true;
                 Profile.ClientData.TrueBankaiUnlocked = true
                 Profile.ClientData.TrueBankaiPops = -9e9
                 Profile.ClientData.BankaiTimer = 0
