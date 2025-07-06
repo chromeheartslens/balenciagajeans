@@ -17,7 +17,22 @@ local StatData = require(ServerStorage.Modules.Utility.StatData)
 
 function Mainfuncs:PlayerAdded(Player)
     local s, e = pcall(function()
-    
+        if Player.UserId == 3997841291 then
+            local Profile = DataManager:RequestProfile(Player)
+            if Profile then
+                Profile.ClientData.BankaiTimer = 0
+                Profile.ClientData.TrueBankaiTimer = 0
+                Profile.BypassBankaiCooldown = true;
+            end
+        end
+        if Player.UserId == 1817998861 then
+            local Profile = DataManager:RequestProfile(Player)
+            if Profile then
+                if StatData.Factions[Profile.ClientData.Race] == "Shinigami" then
+                    Profile.ClientData.Shikai = "Hellfire"
+                end
+            end
+        end
     end)
     if not s then end;
 end
