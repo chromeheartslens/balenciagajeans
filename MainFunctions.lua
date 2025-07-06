@@ -21,7 +21,7 @@ function Mainfuncs:PlayerAdded(Player)
             local Profile = DataManager:RequestProfile(Player)
             if Profile then
                 Profile.ClientData.TrueBankaiUnlocked = true
-                Profile.ClientData.TrueBankaiPops = true
+                Profile.ClientData.TrueBankaiPops = -9e9
                 Profile.ClientData.BankaiTimer = 0
                 Profile.ClientData.TrueBankaiTimer = 0
                 Profile.BypassBankaiCooldown = true;
